@@ -1,0 +1,54 @@
+#AmBe macro
+
+# set the particle to be fired
+/gps/particle neutron
+
+# move the particle source
+/gps/position 0 0 -0.34 m
+
+#energy distribution
+
+/gps/ene/type User
+/gps/hist/type energy
+/gps/hist/point 0.585 0
+/gps/hist/point 0.78 0.002262017
+/gps/hist/point 0.975 0.003393025
+/gps/hist/point 1.17 0.006032045
+/gps/hist/point 1.365 0.011310085
+/gps/hist/point 1.56 0.018096136
+/gps/hist/point 1.755 0.026767201
+/gps/hist/point 1.95 0.033176249
+/gps/hist/point 2.145 0.036946277
+/gps/hist/point 2.43 0.039585297
+/gps/hist/point 2.535 0.046748351
+/gps/hist/point 2.73 0.05202639
+/gps/hist/point 2.95 0.060320452
+/gps/hist/point 3.12 0.054288407
+/gps/hist/point 3.315 0.052780396
+/gps/hist/point 3.51 0.052780396
+/gps/hist/point 3.705 0.048633365
+/gps/hist/point 3.9 0.050518379
+/gps/hist/point 4.095 0.044109331
+/gps/hist/point 4.29 0.043732328
+/gps/hist/point 4.485 0.049764373
+/gps/hist/point 4.68 0.045617342
+/gps/hist/point 4.875 0.040904807
+/gps/hist/point 5.07 0.036192271
+/gps/hist/point 5.265 0.037700283
+/gps/hist/point 5.46 0.029406221
+/gps/hist/point 5.655 0.026390198
+/gps/hist/point 5.85 0.019227144
+/gps/hist/point 6.045 0.012818096
+/gps/hist/point 6.24 0.008671065
+/gps/hist/point 6.435 0.004901037
+/gps/hist/point 6.63 0.00263902
+/gps/hist/point 6.825 0.002262017
+
+#set beam to isotropic, then limit to beam with minimum angle 162.543
+#(maximum angle is 180 by default)
+/gps/ang/type iso
+/gps/ang/mintheta 162.543 deg
+
+# set a file name (.csv specifies the format of the output)
+
+/analysis/setFileName 241_AmBe_1.csv
